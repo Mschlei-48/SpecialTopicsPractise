@@ -2,7 +2,7 @@ name: mishiWorkflow
 on:
   push:
     branches:
-    - main
+    - branch2
 permissions:
   id-token: write
   contents: write

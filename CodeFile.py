@@ -42,6 +42,11 @@ print("Target variable is:",target.head())
 #Split data into train and test
 x_train,x_test,y_train,y_test=train_test_split(features,target,test_size=0.3)
 print(x_train.shape, x_test.shape)
+#Scale the data
+scaler=StandardScaler()
+x_train=scaler.fit_transform(x_train,y_train)
+x_test=scaler.fit_transform(x_test,y_test)
+
 #Model
 model=Lasso()
 model.fit(x_train,y_train)
