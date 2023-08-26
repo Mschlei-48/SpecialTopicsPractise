@@ -13,7 +13,7 @@ jobs:
     steps:
       -uses: actions/checkout@v3
       -uses: iterative/setup-cml@v1
-      FirstStep:
+      -name: FirstStep
         env:
           REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: |
