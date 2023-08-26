@@ -9,7 +9,6 @@ permissions:
 jobs:
   FirstJob:
     runs-on: ubuntu-latest
-    container: 
     timeout-minutes: 120
     steps:
       -uses: actions/checkout@v3
