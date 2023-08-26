@@ -20,3 +20,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           python CodeFile.py
+      - name: Step2
+        env:
+          REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: |
+          echo " #Results are:">report.md
+          echo results.txt>>report.md
+          echo '![](./ActualvsPredicted.png "Actual vs Predicted Plot")'>report.md
+          cml comment create report.md
