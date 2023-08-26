@@ -24,7 +24,7 @@ jobs:
         env:
           REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: |
-          echo " #Results are:">report.md
-          echo results.txt>>report.md
-          echo '![](./ActualvsPredicted.png "Actual vs Predicted Plot")'>report.md
+          echo " #Results are:" > report.md
+          echo results.txt >> report.md
+          echo '![](./ActualvsPredicted.png "Actual vs Predicted Plot")' > report.md
           cml comment create report.md
