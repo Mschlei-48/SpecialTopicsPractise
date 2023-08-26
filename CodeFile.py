@@ -48,7 +48,7 @@ x_train=scaler.fit_transform(x_train,y_train)
 x_test=scaler.fit_transform(x_test,y_test)
 
 #Model
-model=Lasso()
+model=RandomForestRegressor()
 model.fit(x_train,y_train)
 #Make predictions
 y_pred=model.predict(x_test)
